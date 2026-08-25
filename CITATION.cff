@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this design, please cite the conference chapter below."
+title: "Vibrotactile Feedback Device for Transfemoral Prostheses (open design files)"
+authors:
+  - family-names: "Tamashiro"
+    given-names: "Daniel Seiei Uehara"
+    affiliation: "Universidade Federal do ABC; IMREA HCFMUSP, Universidade de São Paulo"
+  - family-names: "Coelho"
+    given-names: "Daniel Boari"
+    affiliation: "Universidade Federal do ABC"
+  - family-names: "Battistella"
+    given-names: "Linamara Rizzo"
+    affiliation: "Faculdade de Medicina, Universidade de São Paulo"
+license: CC-BY-4.0
+preferred-citation:
+  type: conference-paper
+  title: "Development of a Proprioceptive Stimulation Device to Gait in Transfemoral Amputees"
+  authors:
+    - family-names: "Tamashiro"
+      given-names: "Daniel Seiei Uehara"
+    - family-names: "Coelho"
+      given-names: "Daniel Boari"
+    - family-names: "Battistella"
+      given-names: "Linamara Rizzo"
+  collection-title: "XXIX Brazilian Congress on Biomedical Engineering (CBEB 2024), IFMBE Proceedings, vol. 125"
+  publisher:
+    name: "Springer, Cham"
+  year: 2025
+  doi: "10.1007/978-3-031-93646-3_1"
