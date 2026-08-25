@@ -59,9 +59,19 @@ A preliminary account of the device concept and bench measurements appeared in:
 
 A full journal manuscript (complete technical description, bench characterization, and the user satisfaction study) is under preparation/submission; this repository accompanies it.
 
+## Known limitations of this board revision
+
+Review these before building or deriving from this design:
+
+1. **USB-C CC pulldowns are absent.** Only VBUS (A9/B9) and GND (A12/B12) are connected; CC1/CC2 float and there are no 5.1 kΩ pulldowns. Consequence: the board charges normally from a USB-A→USB-C cable, but **will not receive power from USB-C→USB-C cables or USB-C (PD) chargers**. Next revision: add two 5.1 kΩ 0402 resistors, CC1→GND and CC2→GND.
+2. **Charge current is 1.25C for the specified cell.** R13 = 2 kΩ programs the MCP73832 to 500 mA, above the standard 1C rating of the 400 mAh cell. Next revision: R13 = 3.3 kΩ (≈300 mA, ≈0.75C) — or keep 2 kΩ only with cells ≥500 mAh. Use only protected Li-Po cells.
+3. **No flyback diode across the motor.** The inductive kick of the ERM motor at every turn-off stresses Q2 (adequate margin in practice, but repeated at every step). Next revision: a small Schottky or 1N4148 across the motor terminals.
+4. **Motor overdrive.** The motor drive rail (3.7–4.2 V) slightly exceeds the motor's rated voltage (2.7–3.3 V); P1 can compensate by limiting base drive.
+5. **Component availability.** The yellow 0603 LEDs (LED1/LED2) were low-stock at quoting time; any 0603 indicator LED substitutes directly. Choosing basic-library alternatives for the extended parts (headers, USB connector, LEDs) reduces the assembly fee.
+
 ## Disclaimer
 
-This design is provided for **research and educational purposes**. It is **not an approved medical device** and must not be used for clinical decision-making or unsupervised patient care. Any use with patients must be conducted under appropriate ethical approval and professional supervision. Note that the motor drive rail (3.7–4.2 V) slightly exceeds the motor's rated voltage (2.7–3.3 V), and the circuit contains no flyback diode across the motor — review these points before derivative designs.
+This design is provided for **research and educational purposes**. It is **not an approved medical device** and must not be used for clinical decision-making or unsupervised patient care. Any use with patients must be conducted under appropriate ethical approval and professional supervision.
 
 ## License
 
