@@ -1,0 +1,10 @@
+* text=auto
+*.pdf binary
+*.step binary
+*.epro2 binary
+*.zip binary
+*.xlsx binary
+*.png binary
+*.md text
+*.cff text
+*.tel text
