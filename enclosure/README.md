@@ -14,7 +14,8 @@ Two-part 3D-printable housing that holds the battery and the circuit board and c
 |---|---|
 | `enclosure_housing.stl` / `.SLDPRT` | main body: clamp, motor recess, LED holes, battery/circuit compartment |
 | `enclosure_lid.stl` / `.SLDPRT` | closing lid |
-| `gcode/housing+lid_K1Max_0.4_PETG.gcode` | both parts, ready to print on a Creality K1 Max |
+| `gcode/housing+lid_K1Max_0.4_PLA.gcode` | both parts, PLA profile (as used in the study) |
+| `gcode/housing+lid_K1Max_0.4_PETG.gcode` | both parts, PETG profile |
 | `gcode/lid_only_K1Max_0.4_PETG.gcode` | lid only |
 
 ## Measured dimensions (from the meshes)
@@ -30,22 +31,23 @@ Two-part 3D-printable housing that holds the battery and the circuit board and c
 
 ## Print settings
 
-The supplied G-code was generated with Creality Print 4.3.7 for a **Creality K1 Max**, 0.4 mm nozzle:
+Both profiles were generated with Creality Print 4.3.7 for a **Creality K1 Max**, 0.4 mm nozzle. The prototype used in the study was printed in **PLA**; a PETG profile is also provided, since PETG is the tougher choice for the clamp arms, which flex on every installation.
 
-| Parameter | Value |
-|---|---|
-| Material (as sliced) | PETG, 1.75 mm (Creality CR-PETG) |
-| Nozzle / bed temperature | 250 °C / 80 °C |
-| Layer height (incl. first layer) | 0.20 mm |
-| Wall line count | 2 (≈0.87 mm), inner wall line width 0.45 mm |
-| Top layers | 4 |
-| Infill | grid, 15 % |
-| Supports | enabled (support roof on) |
-| Bed adhesion | auto brim |
-| Print speed | 300 mm/s (outer wall 200, top/bottom 200, support 150, initial layer 60) |
-| Both parts together | 33 min, 14.28 g of filament, 4.79 m |
+| Parameter | PLA (as used) | PETG (alternative) |
+|---|---|---|
+| Filament | Generic PLA, 1.75 mm | Creality CR-PETG, 1.75 mm |
+| Nozzle / bed temperature | 230 °C / 45 °C | 250 °C / 80 °C |
+| Layer height (first layer) | 0.25 mm (0.20 mm) | 0.20 mm (0.20 mm) |
+| Wall line count | 2 (≈0.87 mm) | 2 (≈0.87 mm) |
+| Top / bottom layers | 4 / 4 | 4 / 4 |
+| Infill | grid, 50 % | grid, 15 % |
+| Supports | enabled | enabled |
+| Bed adhesion | brim | auto brim |
+| Print speed | 250 mm/s (outer wall 175, top/bottom 175) | 300 mm/s (outer wall 200, top/bottom 200) |
+| Flow ratio | 95 % | 100 % |
+| Both parts | 30 min, 6.35 m (≈19 g) | 33 min, 4.79 m (≈14 g) |
 
-PLA prints this geometry equally well with standard settings (≈210 °C / 60 °C); adjust the profile if you switch material. PETG is the tougher choice for the clamp arms, which flex on every installation.
+Filament figures include brim and supports, so the finished parts weigh less. Z-seam is set to *sharpest corner / hide seam*, and *only one wall for roofing* is enabled in both profiles.
 
 ## Printing notes
 
