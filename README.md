@@ -25,7 +25,7 @@ Circuit (as used in the user study; reconstructed from the design files):
 |---|---|
 | `hardware/pcb/` | Gerber fabrication files, BOM (with LCSC part numbers), pick-and-place, netlist, PCB layout PDF, 3D STEP of the board, EasyEDA Pro project |
 | `hardware/schematic/` | Clean schematic (PNG) |
-| `enclosure/` | 3D-printable enclosure with C-shaped interference-fit clamp for the prosthetic tube *(files being added)* |
+| `enclosure/` | 3D-printable housing and lid (STL + SolidWorks), K1 Max G-code, print settings |
 | `docs/photos/` | Prototype photos, block diagram, operating principle |
 
 ## Cost
@@ -45,7 +45,7 @@ Setup fees dominate at this batch size; the per-unit cost approaches the compone
 
 1. **PCB:** upload `hardware/pcb/Gerber_*.zip`, the BOM, and the pick-and-place file to a turnkey assembly service (e.g., JLCPCB), or fabricate the board and hand-solder — all parts are mass-market components.
 2. **Off-board parts:** FSR402 force-sensing resistor, C1026B-class coin ERM motor (10 × 3 mm), 3.7 V/400 mAh Li-Po cell (602525 or similar), slide switch, small potentiometer, hook-up wire.
-3. **Enclosure:** print the model in `enclosure/`; the C-clamp fits the prosthetic tube by interference — no tools or screws.
+3. **Enclosure:** print the housing and lid from `enclosure/` (PLA, 0.20 mm layers, 15% infill, no supports; ~29 min, ~14 g); the C-clamp fits the prosthetic tube by interference — no tools or screws.
 4. **Mounting:** fix the FSR to the plantar surface of the prosthetic foot at the heel region (thin adhesive tape); clamp the enclosure to the distal portion of the prosthetic tube — the coin motor, seated in the enclosure recess, is pressed against the tube automatically; route the sensor cable along the prosthesis.
 5. **Setup:** switch on, confirm the wearer perceives the vibration at the residual limb/socket interface, and adjust P1 so the motor activates on weight bearing at a comfortable intensity.
 
