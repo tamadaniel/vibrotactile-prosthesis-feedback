@@ -26,6 +26,7 @@ Circuit (as used in the user study; reconstructed from the design files):
 | `hardware/pcb/` | Gerber fabrication files, BOM (with LCSC part numbers), pick-and-place, netlist, PCB layout PDF, 3D STEP of the board, EasyEDA Pro project |
 | `hardware/schematic/` | Clean schematic (PNG) |
 | `enclosure/` | 3D-printable housing and lid (STL + SolidWorks), K1 Max G-code, print settings |
+| `bench/latency/` | Oscilloscope captures, analysis code and figure for the FSR-to-vibration delay |
 | `docs/photos/` | Prototype photos, block diagram, operating principle |
 
 ## Cost
@@ -51,7 +52,7 @@ Setup fees dominate at this batch size; the per-unit cost approaches the compone
 
 ## Status and evidence
 
-This is a **research prototype**. In a bench test referenced to ISO 2631-1, the vibration transmitted to the socket region measured 0.48 ± 0.06 m/s². In a cross-sectional study at IMREA HC-FMUSP (research ethics approval CAAE 75258523.9.0000.0068), ten experienced transfemoral prosthesis users wore the device during a supervised ~5-min walk: all perceived the stimulus, no device-related adverse events occurred, and all eight B-QUEST 2.0 device items reached a median score of 5/5. **No clinical outcome (gait, balance, proprioception) has been evaluated yet**; a controlled study with three-dimensional gait analysis is planned.
+This is a **research prototype**. In a bench test referenced to ISO 2631-1, the vibration transmitted to the socket region measured 0.48 ± 0.06 m/s², and the delay from foot loading to vibration onset was 110 ms (95% CI 103–117 ms), reaching half amplitude at 137 ms (raw captures and analysis in [`bench/latency/`](bench/latency/)). In a cross-sectional study at IMREA HC-FMUSP (research ethics approval CAAE 75258523.9.0000.0068), ten experienced transfemoral prosthesis users wore the device during a supervised ~5-min walk: all perceived the stimulus, no device-related adverse events occurred, and all eight B-QUEST 2.0 device items reached a median score of 5/5. **No clinical outcome (gait, balance, proprioception) has been evaluated yet**; a controlled study with three-dimensional gait analysis is planned.
 
 A preliminary account of the device concept and bench measurements appeared in:
 
