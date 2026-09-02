@@ -113,8 +113,7 @@ if __name__ == "__main__":
 
     comp = t.dropna(subset=[f"lim{LIMIARES[0]}"])
     if len(comp):
-        print(f"\ncom ondas: {len(comp)} de {len(t)} tentativas "
-              f"(as demais so tem metadados no CSV)")
+        print(f"\ncapturas com ondas: {len(comp)} de {len(t)} arquivos")
         print(f"  degrau do FSR ocorre {comp.t_fsr.min():.1f} a "
               f"{comp.t_fsr.max():.1f} ms ANTES do gatilho do osciloscopio")
         for k in LIMIARES:

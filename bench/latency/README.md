@@ -54,15 +54,16 @@ oscilloscope trigger.
 
 ## Data
 
-Ten captures were taken; **five contain complete waveforms** (`med3`, `med7`,
-`med8`, `med9`, `med10`) and are the ones analysed. The other five CSV files
-hold only acquisition metadata — they are kept here so the discard is visible
-rather than silent.
+Ten captures were taken. **Five contain complete waveforms** (`med3`, `med7`,
+`med8`, `med9`, `med10`) and are the five kept here and analysed; the other
+five held only acquisition metadata, with no waveform to measure, and are not
+included.
 
 - `*_med*.csv` — raw captures, semicolon-separated, comma decimal, latin-1.
   Columns: time (ms), channel A (V), channel B (mV).
 - `*_med*.png` — PicoScope screenshots of the same captures.
-- `tempo.xlsx` — the manual cursor readings, kept for comparison.
+- `tempo.xlsx` still lists all ten trials, since the manual cursor readings
+  were taken on screen before the discard.
 
 ## Code
 
