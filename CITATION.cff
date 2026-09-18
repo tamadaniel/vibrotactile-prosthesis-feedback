@@ -12,6 +12,7 @@ authors:
     given-names: "Linamara Rizzo"
     affiliation: "Faculdade de Medicina, Universidade de São Paulo"
 license: CC-BY-4.0
+repository-code: "https://github.com/tamadaniel/vibrotactile-prosthesis-feedback"
 preferred-citation:
   type: conference-paper
   title: "Development of a Proprioceptive Stimulation Device to Gait in Transfemoral Amputees"
